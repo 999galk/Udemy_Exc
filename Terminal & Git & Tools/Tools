@@ -1,0 +1,5 @@
+Git Bash:
+
+- Run pycharm from there:
+1. cd /c/'Program Files'/JetBrains/'PyCharm Community Edition 2019.2.1'/bin/pycharm64.exe
+2. start pycharm64
