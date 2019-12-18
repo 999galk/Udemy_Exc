@@ -1,5 +1,26 @@
 Git Bash:
 
-- Run pycharm from there:
-1. cd /c/'Program Files'/JetBrains/'PyCharm Community Edition 2019.2.1'/bin/pycharm64.exe
-2. start pycharm64
+- Run sublime text from there:
+1. alias is kept in .bashrc file (from home directory) : alias subl = "C/Sublime_Text/sublime_text.exe". Run it with subl from terminal
+
+- Git
+1. clone a reposetory using git clone http address
+* The following commands will be available only from the cloned directory:
+3. git pull - pulls the latest version of the files from git
+2. git status - shows you files that are different from what is live in master
+3. git add - used either to add a specific file : "git add file/dir name" or to add all the files you see in git status : "git add ."
+4. git commit -m "messege"
+5. git push - pushes the changes to git, will now be latest version of the files in git
+
+Branchs:
+1. git branch - shows you all the exsiting branches, the one your in is marked in green
+2. git branch "branch name" - will create a new branch
+3. git checkout "branch name" - will change the active branch to be this one
+* You can combine the two : "git checkout -b "new branch name""
+4. All the above workflow (status, comming, push) 
+* git diff - shows the differance between the changed files to the origin
+5. There will be a new pull request in git where you can comment and see the changes
+6. merge the pull request into master -> usually by team leader 
+7. Delete branch - if you won't use it again its better to keep it clean and delete it
+8. merge master - from your brench you can "git merge master" which is like "pull" only from branches.
+If you have conflicts it will show up in your sublimeText file - >>head till === is what exist in your file, line until >>master is what exist on master
