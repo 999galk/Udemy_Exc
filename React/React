@@ -1,0 +1,30 @@
+React replaced Jquery as a library that should make it much easier to manipulate & scale websites.
+Developed by FB to make our website - the DOM - change in predictable ways that is easy to manage.
+
+its just a view, responsive.
+
+Prinsiples:
+1. thinking in componenets - netwrok of lego blocks, combined together to create your website
+2. Data flows from to to bottom. parents are not affected but child nodes changes, but child node are affected by parent nodes changes
+3. Ecosystem - NPM, node.js, babel, webpack...and huge community
+
+React's Component comes with "lifecycle hooks":
+
+Mount methods:
+Mount is actually the replacement of the 'root' div with the randered components. Its the start of the App. It will look for the following methods by its order:
+- constructor() - do the app had a constructor? if so it will run the code inside.
+- componentWillMount()
+- render() - do we have anything to render? then it will render whats inside
+- componentDidMount() - run whats inside once the component is mounted
+
+Updating:
+Whenever a component changes (like we had with the robots array). It will look for the following methods by its order:
+- static getDerivedStateFromProps()
+- shouldComponentUpdate()
+- render()
+- getSnapshotBeforeUpdate()
+- componentDidUpdate()
+
+Unmounting:
+When component is removed from the page. For example if we move to a different page we want to first unmount the App component and replace it with (mount) the relevant one  
+- componentWillUnmount()

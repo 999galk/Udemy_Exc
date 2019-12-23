@@ -98,3 +98,64 @@ function checkBasket(basket, lookingFor) {
      }
      return 'this item does not exist in your basket';
 }
+
+
+
+var users=[
+{
+    username: "saswata",
+    password:1234,
+},
+{
+    username: "yoo",
+    password:5678,
+},
+{
+    username: "poo",
+    password: 1234,
+}
+]
+
+var timeline=[
+{
+    username:"ronaldo",
+    post:"we did"
+},
+{
+    username:"benz",
+    post:"we "
+},
+{
+    username:"mar",
+    post:"did"
+}
+]
+
+var login=function (name,pass) {
+    var userExist=false;
+    for(i=0;i<users.length;i++)
+    {
+        if(name===users[i].username && pass===users[i].password)
+        {
+            console.log(timeline);
+            userExist=true;
+        }
+        else if (name===users[i].username && pass!==users[i].password) 
+        {
+            // Means that the user exist in the system but pass is incorrect
+            console.log("password is wrong");
+            userExist=true;
+        }
+        // if you had another 'else' here saying both username&pass are incorrect you would get the error messeage in every iteration of the loop (unless it was the first object in the array), we need to finish going over all the array elements before we can determine if user exists or not.
+        // This is why I kept a bool var that indicates if we found that the user exists meaning we already notified something to the console and we don't want to notify anything else
+    }
+    
+    if(!userExist){
+      console.log("user doesn't exist");
+    }
+  }
+
+var name=prompt("Enter your username");
+var pass=Number(prompt("Enter your password"));
+login(name,pass);
+      
